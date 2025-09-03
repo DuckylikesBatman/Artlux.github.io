@@ -1,0 +1,226 @@
+/* ======================================
+   ArtLux – checkout.css
+   Refined Stripe-style form layout
+======================================== */
+
+:root {
+  --primary: #c9a33a;
+  --primary-dark: #a28326;
+  --surface: #fff;
+  --bg: #fefdfb;
+  --text: #222;
+  --muted: #888;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.checkout-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.checkout-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.checkout-right {
+  flex: 1;
+  min-width: 300px;
+  background: #fafafa;
+  border-left: 1px solid #eaeaea;
+  padding-left: 2rem;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.checkout-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-group label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.checkout-group input,
+.checkout-group select,
+.checkout-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.terms {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.delivery-method {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.method {
+  border: 1.5px solid #ccc;
+  border-radius: var(--radius);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.method input {
+  display: none;
+}
+
+.method.active,
+.method:hover {
+  border-color: var(--primary);
+  background: #fff9eb;
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+}
+
+.cart-item p {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.cart-item span {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.discount {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.discount input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+.discount button {
+  padding: 0.6rem 1rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.summary .total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.6rem;
+}
+
+.checkout-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.checkout-button:hover {
+  background: var(--primary-dark);
+}
+
+.secure {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .checkout-page {
+    flex-direction: column;
+  }
+  .checkout-right {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+}

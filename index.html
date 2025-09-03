@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ArtLux – Fine Art & Bespoke Decor</title>
+  <meta name="description" content="ArtLux: Decorative painting & bespoke decor. Transforming walls into works of art since 2019." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="nav.css"/>
+
+</head>
+<body>
+  <header class="artlux-header" id="siteHeader">
+    <a href="index.html" class="artlux-header-logo">Art<span>Lux</span></a>
+  
+    <!-- burger (mobile) -->
+    <input type="checkbox" id="navToggle" hidden>
+    <label for="navToggle" class="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+  
+    <!-- primary navigation -->
+    <nav class="artlux-nav-main" role="navigation">
+      <a href="index.html" class="artlux-nav-main-button active">Home</a>
+      <a href="gallery.html" class="artlux-nav-main-button">Gallery</a>
+      <a href="commission.html" class="artlux-nav-main-button">Commission</a>
+      <a href="about.html" class="artlux-nav-main-button">About</a>
+      <a href="contact.html" class="artlux-nav-main-button">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-split">
+      <div class="hero-text">
+        <h1>Elevate Your Space With <span>Timeless Art</span></h1>
+        <p>Bespoke murals and fine art commissions tailored to your vision. Transform your walls into masterpieces with our premium decorative painting services.</p>
+        <div class="hero-actions">
+          <a href="commission.html" class="btn btn-primary">Start Your Project</a>
+          <a href="gallery.html" class="btn btn-outline">View Gallery</a>
+        </div>
+      </div>
+
+      <div class="hero-slideshow" data-slider data-autoplay="true" data-interval="6000">
+        <div class="hero-slide active">
+          <img src="Images/hero-bg.jpeg" alt="Abstract gold and blue painting">
+        </div>
+        <div class="hero-slide">
+          <img src="Images/interior-2.png" alt="Elegant decorative wall painting">
+        </div>
+        <div class="hero-slide">
+          <img src="Images/interior-8.jpg" alt="Luxury gold leaf artwork">
+        </div>
+      
+        
+        <div class="slider-controls">
+          <button class="slider-dot active" aria-label="Go to slide 1"></button>
+          <button class="slider-dot" aria-label="Go to slide 2"></button>
+          <button class="slider-dot" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FEATURED ====== -->
+    <section class="section featured-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Featured Collections</h2>
+          <p class="section-subtitle">Explore our curated selection of premium artworks that blend contemporary vision with timeless elegance</p>
+        </header>
+
+        <div class="artwork-grid">
+          <!-- Card 1 -->
+          <article class="artwork-card">
+            <a class="artwork-media" href="gallery.html#sunset-bliss" aria-label="View Sunset Bliss details">
+              <img src="Images/painting11-dec.jpeg" alt="Abstract gold and blue painting" loading="lazy" />
+            </a>
+            <div class="artwork-details">
+              <h3 class="artwork-title">Golden Abstraction</h3>
+              <p class="artwork-price">$2,800</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="artwork-card">
+            <a class="artwork-media" href="gallery.html#ocean-waves" aria-label="View Ocean Waves details">
+              <img src="Images/painting1-dec.jpeg" alt="Abstract gold and blue painting" loading="lazy" />
+            </a>
+            <div class="artwork-details">
+              <h3 class="artwork-title">Elegance in Blue</h3>
+              <p class="artwork-price">$3,200</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="artwork-card">
+            <a class="artwork-media" href="gallery.html#golden-fields" aria-label="View Golden Fields details">
+              <img src="Images/painting10-dec.jpeg" alt="Abstract gold and blue painting" loading="lazy" />
+            </a>
+            <div class="artwork-details">
+              <h3 class="artwork-title">Luminous Gold</h3>
+              <p class="artwork-price">$4,500</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ARTIST ====== -->
+    <section class="section bio-section">
+      <div class="container">
+        <div class="bio">
+          <div class="bio-text">
+            <h2>Manal Yehya</h2>
+            <p class="bio-description">Lebanese artist blending classical techniques with contemporary vision. With a background in fine arts and architecture, Manal brings a unique perspective to each project, creating pieces that tell stories of cultural heritage and personal expression. Her work has been featured in galleries across the Middle East and Europe.</p>
+            <dl class="bio-stats" aria-label="Artist stats">
+              <div class="stat-item">
+                <dt class="stat-number">200+</dt>
+                <dd class="stat-label">Murals Completed</dd>
+              </div>
+              <div class="stat-item">
+                <dt class="stat-number">15</dt>
+                <dd class="stat-label">Years Experience</dd>
+              </div>
+              <div class="stat-item">
+                <dt class="stat-number">24</dt>
+                <dd class="stat-label">Countries</dd>
+              </div>
+            </dl>
+            <a href="about.html" class="btn btn-outline">View Full Portfolio</a>
+          </div>
+
+          <figure class="bio-image">
+            <img src="Images/manal.jpg" alt="Artist Manal Yehya in her studio" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROCESS ====== -->
+    <section class="section process-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Our Creative Process</h2>
+          <p class="section-subtitle">From initial concept to final masterpiece, our process ensures your vision comes to life perfectly</p>
+        </header>
+
+        <ol class="process-steps">
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3>Consultation</h3>
+            <p>We discuss your vision, space, and preferences in detail to create a tailored proposal that aligns with your aesthetic and functional requirements.</p>
+          </li>
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3>Design Development</h3>
+            <p>Initial sketches, material samples, and color studies are presented for your feedback, with revisions until the design is perfect.</p>
+          </li>
+          <li class="process-step">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3>Artwork Creation</h3>
+            <p>Our master artists bring the artwork to life with meticulous attention to detail, using only premium materials and techniques.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Client Experiences</h2>
+          <p class="section-subtitle">What our collectors say about working with ArtLux</p>
+        </header>
+
+        <div class="testimonials-grid" role="list">
+          <article class="testimonial-card" role="listitem">
+            <blockquote class="testimonial-content">
+              "ArtLux transformed our corporate lobby into a breathtaking space that perfectly represents our brand values. The mural exceeded all expectations and has become a conversation piece for all our visitors."
+            </blockquote>
+            <footer class="testimonial-author">
+              <p class="author-name">Sarah K.</p>
+              <p class="author-title">Beirut Residence</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" role="listitem">
+            <blockquote class="testimonial-content">
+              "Working with Manal was an absolute dream. She captured exactly what we envisioned for our luxury restaurant while adding her artistic expertise to elevate the concept beyond what we imagined."
+            </blockquote>
+            <footer class="testimonial-author">
+              <p class="author-name">Michel T.</p>
+              <p class="author-title">Bistro Owner, Dubai</p>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" role="listitem">
+            <blockquote class="testimonial-content">
+              "The bespoke artwork in our penthouse has completely transformed the space. The quality and attention to detail is exceptional - worth every penny for the luxury experience."
+            </blockquote>
+            <footer class="testimonial-author">
+              <p class="author-name">Nadia R.</p>
+              <p class="author-title">Private Collector, London</p>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="artlux-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
+        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+      </div>
+
+      <nav class="footer-section footer-links" aria-label="Quick Links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="commission.html">Commission</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-section footer-links" aria-label="Legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="ToS.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p>Corniche El Mazraa, Beirut</p>
+        <p><a href="tel:+96103683127">+961 03 683 127</a></p>
+        <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+     <div class="social-links" aria-label="Follow us">
+        <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 2.16c3.2 0 3.58.01 4.85.07
+                     3.25.15 4.77 1.69 4.92 4.92
+                     .06 1.26.07 1.64.07 4.85
+                     0 3.2-.01 3.58-.07 4.85
+                     -.15 3.23-1.66 4.77-4.92 4.92
+                     -1.26.06-1.64.07-4.85.07
+                     -3.2 0-3.58-.01-4.85-.07
+                     -3.26-.15-4.77-1.7-4.92-4.92
+                     -.06-1.26-.07-1.64-.07-4.85
+                     0-3.2.01-3.58.07-4.85
+                     .15-3.23 1.66-4.77 4.92-4.92
+                     1.26-.06 1.65-.07 4.85-.07z
+                     m0-2.16c-3.26 0-3.67.01-4.95.07
+                     -4.36.2-6.78 2.62-6.98 6.98
+                     -.06 1.28-.07 1.69-.07 4.95
+                     0 3.26.01 3.67.07 4.95
+                     .2 4.36 2.62 6.78 6.98 6.98
+                     1.28.06 1.69.07 4.95.07
+                     3.26 0 3.67-.01 4.95-.07
+                     4.35-.2 6.78-2.62 6.98-6.98
+                     .06-1.28.07-1.69.07-4.95
+                     0-3.26-.01-3.67-.07-4.95
+                     -.2-4.35-2.62-6.78-6.98-6.98
+                     -1.28-.06-1.69-.07-4.95-.07z
+                     m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
+                     0 3.4 2.76 6.16 6.16 6.16
+                     3.4 0 6.16-2.76 6.16-6.16
+                     0-3.4-2.76-6.16-6.16-6.16
+                     z m0 10.16c-2.21 0-4-1.79-4-4
+                     s1.79-4 4-4 4 1.79 4 4
+                     -1.79 4-4 4z
+                     m6.41-11.84c-.8 0-1.44.64-1.44 1.44
+                     s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
+                     -.64-1.44-1.44-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
+                     C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
+                     h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
+                     1.32 0 2.46.1 2.8.14v3.24h-1.92
+                     c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
+                     l-.47 3.62h-3.12V24h6.12
+                     c.73 0 1.32-.59 1.32-1.32V1.32
+                     C24 .59 23.41 0 22.68 0z"/>
+          </svg>
+        </a>
+      </div>
+      </address>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 ArtLux Murals. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    /* ==============================
+       ArtLux – Enhanced UI JS
+       - Sticky header
+       - Hero slider (autoplay, arrows, dots, swipe, pause-on-hover)
+       - Smooth scrolling
+       ============================== */
+    (function () {
+      // --- Sticky header ---
+      const header = document.getElementById('siteHeader');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      }
+
+      // --- Mobile nav: keep ARIA in sync ---
+      const navToggle = document.getElementById('navToggle');
+      const burger = document.querySelector('label.burger');
+      if (navToggle && burger) {
+        const syncAria = () => burger.setAttribute('aria-expanded', String(navToggle.checked));
+        navToggle.addEventListener('change', syncAria);
+        syncAria();
+      }
+
+      // --- Hero slider ---
+      const slider = document.querySelector('.hero-slideshow');
+      if (!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+      const dots = Array.from(slider.querySelectorAll('.slider-dot'));
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+      const autoplay = true;
+      const intervalMs = 6000;
+
+      let index = 0;
+      let timer = null;
+      let isPaused = false;
+
+      function setActive(i) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[i].classList.add('active');
+        dots[i].classList.add('active');
+        index = i;
+      }
+
+      function next() { goTo((index + 1) % slides.length); }
+      function prev() { goTo((index - 1 + slides.length) % slides.length); }
+      function goTo(i) {
+        setActive(i);
+        if (autoplay) restartTimer();
+      }
+
+      function startTimer() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(() => { if (!isPaused) next(); }, intervalMs);
+      }
+      function restartTimer() { if (autoplay) startTimer(); }
+
+      // Controls
+      nextBtn?.addEventListener('click', next);
+      prevBtn?.addEventListener('click', prev);
+      
+      // Dot navigation
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goTo(i));
+      });
+
+      // Pause on hover/focus
+      slider.addEventListener('mouseenter', () => { isPaused = true; });
+      slider.addEventListener('mouseleave', () => { isPaused = false; });
+      slider.addEventListener('focusin', () => { isPaused = true; });
+      slider.addEventListener('focusout', () => { isPaused = false; });
+
+      // Basic swipe for touch
+      let startX = 0, deltaX = 0;
+      slider.addEventListener('touchstart', (e) => { 
+        startX = e.touches[0].clientX; 
+        deltaX = 0; 
+      }, {passive:true});
+      
+      slider.addEventListener('touchmove', (e) => { 
+        deltaX = e.touches[0].clientX - startX; 
+      }, {passive:true});
+      
+      slider.addEventListener('touchend', () => {
+        if (Math.abs(deltaX) > 50) (deltaX < 0 ? next() : prev());
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') next();
+        if (e.key === 'ArrowLeft') prev();
+      });
+
+      // Init
+      setActive(0);
+      if (autoplay) startTimer();
+    })();
+  </script>
+</body>
+</html>

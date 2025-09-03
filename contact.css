@@ -1,0 +1,125 @@
+/* ======================================================
+   ArtLux – contact.css  ·  Signature-Luxe palette
+   Updated July 2025
+   ====================================================== */
+
+/* ----------  TOKEN FALLBACKS  ---------- */
+:root {
+  --bg:            #fefdfb;
+  --surface:       #ffffff;
+  --surface-elev:  #f6f5f2;
+  --gold-500:      #c9a33a;
+  --gold-600:      #a28326;
+  --text:          #262626;
+  --muted:         #5c5c5c;
+  --radius:        12px;
+  --shadow-sm:     0 4px 10px rgba(0,0,0,.06);
+  --tap:           .28s cubic-bezier(.4,0,.2,1);
+}
+
+/* ----------  BASE  ---------- */
+body.contact-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ----------  CONTACT SECTION ---------- */
+.contact-section {
+  padding: 100px 5%;
+  background: var(--surface);
+  text-align: center;
+}
+.contact-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: var(--gold-500);
+  margin-bottom: 1rem;
+}
+.contact-section p {
+  color: var(--muted);
+  margin-bottom: 2.8rem;
+  font-size: 1.05rem;
+}
+
+/* ----------  GRID LAYOUT ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 48px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ----------  FORM ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.contact-form label {
+  font-weight: 600;
+  text-align: left;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 13px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: #fff;
+  color: var(--text);
+  transition: border var(--tap), box-shadow var(--tap);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(201,163,58,.18);
+}
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.contact-form button {
+  margin-top: .5rem;
+  padding: 14px 40px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--gold-500);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--tap), transform var(--tap);
+}
+.contact-form button:hover {
+  background: var(--gold-600);
+  transform: translateY(-2px);
+}
+
+/* ----------  CONTACT INFO ---------- */
+.contact-info h2 {
+  font-size: 1.15rem;
+  color: var(--gold-600);
+  margin: 1rem 0 .6rem;
+}
+.contact-info p,
+.contact-info a {
+  color: var(--muted);
+  margin: .15rem 0;
+  font-size: 1rem;
+}
+.artlux-social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: .5rem;
+  justify-content:center;
+}
+.artlux-social-icons img {
+  width: 28px;
+  height: 28px;
+}
+.artlux-social-icons img:hover {
+  transform: scale(1.12);
+  filter: none;
+}
+

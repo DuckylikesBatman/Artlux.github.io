@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ArtLux – Paintings Collection</title>
+  <meta name="description" content="Discover original fine art, paintings, and exclusive prints by ArtLux." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="nav.css" />
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body class="gallery-page">
+  <!-- ======= HEADER ======= -->
+  <header class="artlux-header" id="siteHeader">
+    <a href="index.html" class="artlux-header-logo">Art<span>Lux</span></a>
+
+    <!-- burger (mobile) -->
+    <input type="checkbox" id="navToggle" hidden>
+    <label for="navToggle" class="burger" aria-label="Menu" aria-controls="primaryNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- primary navigation -->
+    <nav class="artlux-nav-main" id="primaryNav" role="navigation">
+      <a href="index.html" class="artlux-nav-main-button">Home</a>
+      <a href="gallery.html" class="artlux-nav-main-button active">Gallery</a>
+      <a href="commission.html" class="artlux-nav-main-button">Commission</a>
+      <a href="about.html" class="artlux-nav-main-button">About</a>
+      <a href="contact.html" class="artlux-nav-main-button">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <!-- Tip: if your actual file has spaces, keep the URL-encoded src below. -->
+  <section class="hero" role="banner" aria-label="Transform Your Space with ArtLux">
+    <div class="hero-image-container" aria-hidden="true">
+      <!-- Use either of these depending on your file name -->
+      <!-- A) URL-encoded (keeps your current filename): -->
+      <img src="Images/gallery-bg.png" alt="" class="hero-image" />
+      <!-- B) If you rename the file to remove spaces, swap to:
+      <img src="Images/IMG_0871-2.jpg" alt="" class="hero-image" />
+      -->
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Transform Your Space with ArtLux</h1>
+      <p class="hero-text">Hand‑painted arabesque masterpieces by Manal Yehya — where heritage meets modern elegance.</p>
+    </div>
+  </section>
+
+  <!-- ======= GALLERY ======= -->
+  <main role="main">
+    <section class="gallery-grid" aria-label="ArtLux Paintings">
+      <!-- Card -->
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting6-dec.jpeg" alt="Painting 6 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 6</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting6" class="buy-btn" aria-label="Buy Painting 6">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting8-dec.jpeg" alt="Painting 8 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 8</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting8" class="buy-btn" aria-label="Buy Painting 8">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting10-dec.jpeg" alt="Painting 10 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 10</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting10" class="buy-btn" aria-label="Buy Painting 10">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting11-dec.jpeg" alt="Painting 11 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 11</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting11" class="buy-btn" aria-label="Buy Painting 11">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting12-dec.jpeg" alt="Painting 12 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 12</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting12" class="buy-btn" aria-label="Buy Painting 12">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting14-dec.jpeg" alt="Painting 14 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 14</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting14" class="buy-btn" aria-label="Buy Painting 14">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting1-dec.jpeg" alt="Painting 1 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 1</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting1" class="buy-btn" aria-label="Buy Painting 1">Buy Now</a>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <figure class="painting-container">
+          <img src="images/painting16-dec.jpeg" alt="Painting 16 – Oil on canvas" class="main-view" />
+        </figure>
+        <div class="gallery-info">
+          <h3>Painting 16</h3>
+          <p>Oil on Canvas · 70×100 cm</p>
+          <p class="price">$250</p>
+          <a href="checkout.html?product=painting16" class="buy-btn" aria-label="Buy Painting 16">Buy Now</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+<footer class="artlux-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
+        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+      </div>
+
+      <nav class="footer-section footer-links" aria-label="Quick Links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="commission.html">Commission</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-section footer-links" aria-label="Legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="ToS.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p>Corniche El Mazraa, Beirut</p>
+        <p><a href="tel:+96103683127">+961 03 683 127</a></p>
+        <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+     <div class="social-links" aria-label="Follow us">
+        <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 2.16c3.2 0 3.58.01 4.85.07
+                     3.25.15 4.77 1.69 4.92 4.92
+                     .06 1.26.07 1.64.07 4.85
+                     0 3.2-.01 3.58-.07 4.85
+                     -.15 3.23-1.66 4.77-4.92 4.92
+                     -1.26.06-1.64.07-4.85.07
+                     -3.2 0-3.58-.01-4.85-.07
+                     -3.26-.15-4.77-1.7-4.92-4.92
+                     -.06-1.26-.07-1.64-.07-4.85
+                     0-3.2.01-3.58.07-4.85
+                     .15-3.23 1.66-4.77 4.92-4.92
+                     1.26-.06 1.65-.07 4.85-.07z
+                     m0-2.16c-3.26 0-3.67.01-4.95.07
+                     -4.36.2-6.78 2.62-6.98 6.98
+                     -.06 1.28-.07 1.69-.07 4.95
+                     0 3.26.01 3.67.07 4.95
+                     .2 4.36 2.62 6.78 6.98 6.98
+                     1.28.06 1.69.07 4.95.07
+                     3.26 0 3.67-.01 4.95-.07
+                     4.35-.2 6.78-2.62 6.98-6.98
+                     .06-1.28.07-1.69.07-4.95
+                     0-3.26-.01-3.67-.07-4.95
+                     -.2-4.35-2.62-6.78-6.98-6.98
+                     -1.28-.06-1.69-.07-4.95-.07z
+                     m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
+                     0 3.4 2.76 6.16 6.16 6.16
+                     3.4 0 6.16-2.76 6.16-6.16
+                     0-3.4-2.76-6.16-6.16-6.16
+                     z m0 10.16c-2.21 0-4-1.79-4-4
+                     s1.79-4 4-4 4 1.79 4 4
+                     -1.79 4-4 4z
+                     m6.41-11.84c-.8 0-1.44.64-1.44 1.44
+                     s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
+                     -.64-1.44-1.44-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
+                     C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
+                     h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
+                     1.32 0 2.46.1 2.8.14v3.24h-1.92
+                     c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
+                     l-.47 3.62h-3.12V24h6.12
+                     c.73 0 1.32-.59 1.32-1.32V1.32
+                     C24 .59 23.41 0 22.68 0z"/>
+          </svg>
+        </a>
+      </div>
+      </address>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 ArtLux Murals. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ======= JS (sticky header + nav ARIA) ======= -->
+  <script>
+    // Sticky header effect
+    (function() {
+      const header = document.getElementById('siteHeader');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 50);
+      onScroll();
+      window.addEventListener('scroll', onScroll);
+    })();
+
+    // Mobile nav ARIA sync
+    (function() {
+      const navToggle = document.getElementById('navToggle');
+      const burger = document.querySelector('label.burger');
+      if (!navToggle || !burger) return;
+      const syncAria = () => burger.setAttribute('aria-expanded', String(navToggle.checked));
+      navToggle.addEventListener('change', syncAria);
+      syncAria();
+    })();
+  </script>
+</body>
+</html>

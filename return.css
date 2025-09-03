@@ -1,0 +1,181 @@
+    /* ===================================================================
+    ArtLux Return Policy Page Styles
+    =================================================================== */
+
+    :root {
+    --primary: #2a2a2a;
+    --secondary: #e8e5df;
+    --accent: #a38f6a;
+    --text: #333;
+    --light: #f9f9f7;
+    --border: #ddd;
+    --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    --transition: all 0.3s ease;
+    }
+
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .policy-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('artwork-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    }
+
+    .policy-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-family: var(--font-heading);
+    }
+
+    .policy-hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    }
+
+    /* Policy Content */
+    .policy-content {
+    padding: 80px 0;
+    }
+
+    .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    }
+
+    .policy-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 40px;
+    transition: var(--transition);
+    }
+
+    .policy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    }
+
+    .policy-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--accent);
+    position: relative;
+    padding-bottom: 10px;
+    font-family: var(--font-heading);
+    }
+
+    .policy-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    }
+
+    .policy-card ol,
+    .policy-card ul {
+    padding-left: 20px;
+    }
+
+    .policy-card li {
+    margin-bottom: 10px;
+    }
+
+    .policy-card ul {
+    list-style: none;
+    }
+
+    .policy-card ul li::before {
+    content: '•';
+    color: var(--accent);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    }
+
+    /* Contact CTA */
+    .contact-cta {
+    text-align: center;
+    padding: 60px 0;
+    background: var(--secondary);
+    }
+
+    .contact-cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    }
+
+    .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: var(--transition);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    }
+
+    .btn:hover {
+    background: var(--primary);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+    .policy-hero {
+        padding: 80px 0;
+    }
+    
+    .policy-hero h1 {
+        font-size: 36px;
+    }
+    
+    .policy-hero p {
+        font-size: 18px;
+        padding: 0 20px;
+    line-height: 1.5;
+    }
+    
+    .policy-card {
+        padding: 30px;
+    }
+    
+    .contact-cta h2 {
+        font-size: 28px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .policy-hero {
+        padding: 60px 0;
+    }
+    
+    .policy-hero h1 {
+        font-size: 32px;
+    }
+    
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-cta {
+        padding: 50px 0;
+    }
+    }

@@ -1,0 +1,281 @@
+/* =============================
+   ArtLux – Gallery Page Styles
+   Elegant hero + refined grid
+   ============================= */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Colors */
+  --bg: #f4f4f4;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #666666;
+  --primary: #b79a3c;
+  --primary-dark: #9a7b2e;
+  --gold-100: #f5f0e1;
+  --dark-bg: #0f0f0f;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Motion + effects */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --transition: all 0.45s var(--ease);
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 30px 60px -20px rgba(0,0,0,0.25);
+}
+
+/* ---------- Base ---------- */
+.gallery-page {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; transition: color var(--transition); }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  overflow: hidden;
+}
+
+.hero-image-container { position: absolute; inset: 0; }
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* center focus */
+  transform: scale(1.02);
+  will-change: transform;
+}
+
+/* Darker, refined overlay w/ vignette */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 70% at 50% 60%, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.68) 100%);
+  z-index: 1;
+}
+
+/* No panel, just elegant center text */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: var(--space-xl);
+  color: #fff;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  line-height: 1.06;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: var(--gold-100);
+  letter-spacing: 0.4px;
+  margin: 0 0 0.75rem;
+  text-shadow: 0 12px 28px rgba(0,0,0,0.45), 0 1px 0 rgba(0,0,0,0.35);
+}
+
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 3px;
+  margin: 1rem auto 0;
+  background: linear-gradient(90deg, rgba(183,154,60,0), var(--primary), rgba(183,154,60,0));
+  border-radius: 2px;
+}
+
+.hero-text {
+  max-width: 720px;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  color: rgba(255,255,255,0.92);
+  margin: 0.85rem auto 0;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  letter-spacing: 0.2px;
+}
+
+/* ---------- Gallery Grid ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  padding: var(--space-xxl) var(--space-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+  background: var(--surface);
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.28);
+}
+
+.painting-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4; /* fixed ratio container */
+  overflow: hidden;
+}
+
+.painting-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+
+.gallery-item:hover .painting-container img { transform: scale(1.05); }
+
+/* Overlay info */
+.gallery-info {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: var(--space-xl) var(--space-lg);
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.0) 100%);
+  color: #fff;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-info h3 {
+  margin: 0 0 var(--space-xs);
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+}
+
+.gallery-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.price {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: 0.25rem 0.5rem;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+}
+
+/* Buy button (reveals on hover desktop, always on mobile) */
+.buy-btn {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  padding: 0.35rem 0.9rem;
+  background: rgba(255,255,255,0.92);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.gallery-item:hover .buy-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.buy-btn:hover {
+  background: #fff;
+  color: var(--primary-dark);
+}
+
+/* ---------- Footer (inherits most from index.css) ---------- */
+.artlux-footer { background: var(--dark-bg); color: #e9e9e9; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 900px) {
+  /* mobile menu slide-in handled by index.css/nav.css */
+  .burger { display: block; }
+  .artlux-nav-main {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 280px; height: 100vh;
+    background: #fff;
+    display: flex; flex-direction: column;
+    padding: 100px var(--space-lg) var(--space-xl);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.4s var(--ease);
+  }
+  #navToggle:checked ~ .artlux-nav-main { right: 0; }
+
+  .hero { min-height: 64vh; margin-top: 68px; }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl) var(--space-md);
+  }
+  .hero-title { font-size: clamp(2rem, 7vw, 3rem); }
+  .hero-text { font-size: 1rem; }
+  .gallery-info { padding: var(--space-lg) var(--space-md); }
+  .gallery-info h3 { font-size: 1.25rem; }
+  .buy-btn {
+    opacity: 1; transform: none;
+    top: var(--space-md); right: var(--space-md);
+    padding: 0.25rem 0.65rem; font-size: 0.78rem;
+  }
+}
+
+@media (hover: none) {
+  .gallery-item:hover { transform: none; box-shadow: var(--shadow-lg); }
+  .painting-container img { transform: none !important; }
+}

@@ -1,0 +1,295 @@
+/* ======================================================
+   ArtLux – about.css 
+   Optimized styling for About page (main content only)
+   ====================================================== */
+
+/* ----------  Variables  ---------- */
+:root {
+  --gold-100: #f8f2e6;
+  --gold-300: #e5d8b0;
+  --gold-500: #c9a33a;
+  --gold-700: #8a6e2d;
+  --gold-900: #4d3d1a;
+  --black: #1a1a1a;
+  --gray-100: #f8f8f8;
+  --gray-300: #e0e0e0;
+  --gray-500: #999999;
+  --gray-700: #5c5c5c;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+/* ----------  Hero Section  ---------- */
+.about-hero {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('/images/IMG_5628\ 2.JPG') no-repeat center center/cover;
+  color: var(--white);
+  text-align: center;
+  padding: 0 2rem;
+}
+
+
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+/* ----------  About Founder Section  ---------- */
+.about-founder {
+  padding: 6rem 0;
+  background-color: var(--gold-100);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.founder-content {
+  padding-right: 2rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--gold-700);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--gold-500);
+  margin-top: 1rem;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.founder-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+.founder-image {
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 15px solid var(--white);
+  border-radius: 4px;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+
+.signature img {
+  max-width: 180px;
+}
+
+.signature p {
+  font-style: italic;
+  color: var(--gold-700);
+  line-height: 1.4;
+}
+
+.signature span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+/* ----------  Services Section  ---------- */
+.services-section {
+  padding: 6rem 0;
+  background-color: var(--white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  text-align: center;
+  border-top: 4px solid var(--gold-500);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--gold-500);
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold-700);
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+/* ----------  Portfolio Section  ---------- */
+.portfolio-section {
+  padding: 6rem 0;
+  background-color: var(--gray-100);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 2rem;
+  background: var(--white);
+}
+
+.portfolio-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold-700);
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-style: italic;
+  color: var(--gold-500);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.portfolio-card p {
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----------  Responsive Styles  ---------- */
+@media (max-width: 1024px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .founder-content {
+    padding-right: 0;
+  }
+  
+  .about-hero {
+    height: auto;
+    padding: 8rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signature {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .founder-image img {
+    border-width: 8px;
+  }
+}
